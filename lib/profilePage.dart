@@ -31,22 +31,26 @@ class _ProfilePage1State extends State<ProfilePage1> {
                   ),
                   const SizedBox(height: 16),
                   const _ProfileInfoRow(),
-                  ElevatedButton.icon(
-                    icon: const Icon(Icons.logout),
-                    label: const Text("Logout"),
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: const Color(0xff006df1),
-                      shape: ContinuousRectangleBorder(
-                        borderRadius: BorderRadius.circular(64.0),
+                  Padding(
+                    padding: EdgeInsets.only(left: 20),
+                    child: ElevatedButton.icon(
+                      icon: const Icon(Icons.logout),
+                      label: const Text("Logout"),
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: const Color(0xff006df1),
+                        shape: ContinuousRectangleBorder(
+                          borderRadius: BorderRadius.circular(64.0),
+                        ),
                       ),
+                      onPressed: () {
+                        Navigator.pushReplacement(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => SignInPage1(),
+                          ),
+                        );
+                      },
                     ),
-                    onPressed: () {
-                      Navigator.pushReplacement(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => const SignInPage1()),
-                      );
-                    },
                   ),
                 ],
               ),

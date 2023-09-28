@@ -30,7 +30,7 @@ class UjianOnlineBeranda extends StatelessWidget {
       body: Center(
         child: Column(
           children: [
-            const SizedBox(height: 100.0),
+            const SizedBox(height: 80.0),
             InkWell(
               onTap: () {},
               child: buildFeatureCard(

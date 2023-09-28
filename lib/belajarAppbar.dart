@@ -5,6 +5,24 @@ class BelajarAppBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Future showAlert(String type, int ujianIndex) async {
+      return showDialog(
+          context: context,
+          builder: (BuildContext context) {
+            return AlertDialog(
+              title: Text("$type $ujianIndex"),
+              actions: [
+                ElevatedButton(
+                  onPressed: () {
+                    Navigator.pop(context);
+                  },
+                  child: const Text("close"),
+                )
+              ],
+            );
+          });
+    }
+
     return Scaffold(
       body: SafeArea(
         child: DefaultTabController(
@@ -52,6 +70,7 @@ class BelajarAppBar extends StatelessWidget {
                         (BuildContext context, int index) {
                           return InkWell(
                             onTap: () {
+                              showAlert("ujian", index);
                               print("Ujian $index");
                             },
                             child: ListTile(
@@ -73,6 +92,7 @@ class BelajarAppBar extends StatelessWidget {
                         (BuildContext context, int index) {
                           return InkWell(
                             onTap: () {
+                              showAlert("riwayat", index);
                               print("Riwayat $index");
                             },
                             child: ListTile(

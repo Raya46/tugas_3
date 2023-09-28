@@ -149,8 +149,7 @@ class _SignInPage1State extends State<SignInPage1> {
                                 context,
                                 MaterialPageRoute(
                                   builder: (context) => SimpleBottomNavigation(
-                                    username: username,
-                                  ),
+                                      username: username),
                                 ),
                               );
                             }
@@ -171,7 +170,8 @@ class _SignInPage1State extends State<SignInPage1> {
                             Navigator.pushReplacement(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => const RegisterPage()),
+                                builder: (context) => RegisterPage(),
+                              ),
                             );
                           },
                         )

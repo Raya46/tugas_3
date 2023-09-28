@@ -107,14 +107,10 @@ class _RegisterPageState extends State<RegisterPage> {
                         onPressed: () {
                           if (_formKey.currentState?.validate() ?? false) {
                             Navigator.pushReplacement(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) =>
-                                    const SimpleBottomNavigation(
-                                  username: "",
-                                ),
-                              ),
-                            );
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) =>
+                                        SimpleBottomNavigation(username: "")));
                           }
                         },
                       ),
@@ -130,10 +126,9 @@ class _RegisterPageState extends State<RegisterPage> {
                           ),
                           onTap: () {
                             Navigator.pushReplacement(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => const SignInPage1()),
-                            );
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => SignInPage1()));
                           },
                         )
                       ],
