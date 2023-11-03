@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:learning_1/belajarAppbar.dart';
 import 'package:learning_1/homePage.dart';
-import 'package:learning_1/profilePage.dart';
+import 'package:learning_1/readBuku.dart';
 
 class SimpleBottomNavigation extends StatefulWidget {
   final String username;
@@ -28,9 +28,7 @@ class _SimpleBottomNavigationState extends State<SimpleBottomNavigation> {
     _children = [
       const BelajarAppBar(),
       const UjianOnlineBeranda(),
-      ProfilePage1(
-        username: widget.username,
-      ),
+      ProfilePage1(),
     ];
   }
 
